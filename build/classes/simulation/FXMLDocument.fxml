@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="613.0" prefWidth="776.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="simulation.FXMLDocumentController">
+   <children>
+      <Button layoutX="397.0" layoutY="75.0" mnemonicParsing="false" onAction="#simulate" text="SIMULATE" />
+      <Button layoutX="477.0" layoutY="74.0" mnemonicParsing="false" onAction="#VISUALIZE" text="VISUALIZE" />
+      <TextField layoutX="224.0" layoutY="77.0" />
+      <Text layoutX="68.0" layoutY="92.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MEAN INTERARRIVAL TIME" />
+      <Text layoutX="169.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="5 STORY BUILDING WITH SINGLE ELEVATOR">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Text>
+      <TableView fx:id="tableID" layoutX="99.0" layoutY="139.0" prefHeight="200.0" prefWidth="593.0">
+        <columns>
+          <TableColumn fx:id="ClockTicks" prefWidth="81.0" text="CLOCK TICKS" />
+          <TableColumn fx:id="Curr_Floor" prefWidth="103.0" text="CURRENT FLOOR" />
+            <TableColumn fx:id="Tar_Floor" prefWidth="97.0" text="TARGET FLOOR" />
+            <TableColumn fx:id="ElevatorMoved" prefWidth="117.0" text="ELEVATOR MOVED" />
+            <TableColumn fx:id="TotalPeople" prefWidth="129.0" text="PEOPLE IN ELEVATOR" />
+            <TableColumn fx:id="WaitingTime" prefWidth="64.0" text="DELAY" />
+        </columns>
+      </TableView>
+      <BarChart fx:id="dist" layoutX="177.0" layoutY="376.0" prefHeight="190.0" prefWidth="384.0">
+        <xAxis>
+          <CategoryAxis label="TIME" side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis label="QUEUE" side="LEFT" />
+        </yAxis>
+      </BarChart>
+   </children>
+</AnchorPane>
